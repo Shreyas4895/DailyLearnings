@@ -77,10 +77,10 @@ var destruct = {                              // if we print variable "a" you ge
 // console.log(stored);                                             //if just quotes is passed into params in function call it gives:::: output: undefined
     
 
-function brandDestruct(params,para){ 
-    console.log(params,para); 
-var {company:{[params]:{height:{dimension:{third}}}}}=destruct;
+function brandDestruct(params){ 
+    console.log(params); 
+var {company:{[params]:{height:{dimension:{third}}}}}=destruct;  //we can perform object destructure even after params is used
     return third
     }
-var brandObj=brandDestruct("brand","height");
+var brandObj=brandDestruct("brand");
 console.log(brandObj);
