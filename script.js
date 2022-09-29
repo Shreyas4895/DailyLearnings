@@ -260,29 +260,29 @@
 // })
 // console.log(newArr);
 
-let data = [
-    {
-      country: 'China',
-      population: 1409517397,
-    },
-    {
-      country: 'India',
-      population: 1339180127,
-    },
-    {
-      country: 'USA',
-      population: 324459463,
-    },
-    {
-      country: 'Indonesia',
-      population: 263991379,
-    }
-  ]
+// let data = [
+//     {
+//       country: 'China',
+//       population: 1409517397,
+//     },
+//     {
+//       country: 'India',
+//       population: 1339180127,
+//     },
+//     {
+//       country: 'USA',
+//       population: 324459463,
+//     },
+//     {
+//       country: 'Indonesia',
+//       population: 263991379,
+//     }
+//   ]
 
-let cities = data.filter((val)=>{
-    return val.population>5000000;
-})
-console.log(cities);
+// let cities = data.filter((val)=>{
+//     return val.population>5000000;
+// })
+// console.log(cities);
 
 
 
@@ -419,7 +419,7 @@ console.log(cities);
 
 /////////reduce function is basically used at a place where you have to take all elements of array and come out with single value out of it
 
-const array=[ {name:"tony",age:12,place:'bangalore'}, {name:"Jack",age:22,place:'vrpuram'}, {name:"giant",age:32,place:'krpuram'}, {name:"carter",age:32,place:'krpuram'}]
+// const array=[ {name:"tony",age:12,place:'bangalore'}, {name:"Jack",age:22,place:'vrpuram'}, {name:"giant",age:32,place:'krpuram'}, {name:"carter",age:32,place:'krpuram'}]
 // const output=array.reduce((acc,curr)=>{
   // if(acc[curr.age]){
     // acc[curr.age]=++acc[curr.age]
@@ -431,11 +431,87 @@ const array=[ {name:"tony",age:12,place:'bangalore'}, {name:"Jack",age:22,place:
 // console.log(output);                                                       //// now i'm using filter and map together to display age and name of the people who has age<30 as shown below by using both map and filter
  // const output=array.filter((x)=>x.age<30).map((x)=>x.name);                //in this stage i'm using filter to check age<30 and map the name to age <30 
  // console.log(output);                                                        //output will be "Tony" and "Jack" 
- const output=array.filter((x)=>x.age<30).reduce((acc,cur)=>{  ///here i'm trying to use reduce to get output as 'tony' and 'Jack' 
-  if(cur.age<30){
-    acc.push(cur.name);
-   } return acc; },[]); 
-   console.log(output);
+//  const output=array.filter((x)=>x.age<30).reduce((acc,cur)=>{  ///here i'm trying to use reduce to get output as 'tony' and 'Jack' 
+//   if(cur.age<30){
+//     acc.push(cur.name);
+//    } return acc; },[]); 
+//    console.log(output);
+
+
+// ###########################**********Promise javaScript**********#######################
+
+
+// let p = new Promise((resolve,reject)=>{                            //we are creating a variable p and assigning promise to it ,
+   // let a=1+1                                                   //the callback used to initialise the promise are resolve and reject in this case
+   // if(a==2){                                                //here i'm trying to check if the condition satisfies if resolved and setting a message to it
+     // resolve("success")
+     // }else{
+      // reject("failed")                                       //here i'm checking if the condition gets rejected and message is set
+      // }
+      // })
+// p.then((message)=>{                                           //i'm checking what happens if promise is resolved and printing the message 
+  // console.log("this is in the then "+message)
+  // }).catch((message)=>{                                     //checking if the condition gets rejected? and catching error and printing message
+     // console.log("this is in the catch "+message)
+     // })
+// let first=()=>{                                                               //i'm creating a first variable with promise 
+  // return new Promise(                                                        //returning promise to it
+    // function(resolve,reject){
+      // resolve("you have cat! ")                                                //setting message if success
+      // }
+      // )
+      // }
+// let second=function(dataF){                                                      //creating second variable and returning promise and setting message
+  // return new Promise(
+    // function(resolve,reject){
+      // resolve(dataF +"really?")
+      // }
+      // )
+      // }
+      // first().then((data)=> 
+      // second(data))
+      // .then((data)=>
+      // console.log(data))
+
+// #######promise Chain#######
+
+
+// var myPromise=new Promise(function(resolve,reject){                              //here i'm trying to check if the condition satisfies if resolved and setting a message to it
+   // resolve(1)
+   // })
+   // .then(function(myPromise) { 
+    // console.log(myPromise); 
+    // return myPromise * 2;
+// }).then(function(myPromise) { 
+// console.log(myPromise); 
+// return myPrmise * 2;
+// }).then(function(myPromise) {
+// console.log(myPromise); 
+// return myPromise * 2;
+// })
+// .catch(function(){
+  // console.error("will show error")
+  // })
+
+// const fetchHandler
+// fetch('http://example.com/movies.json')
+// .then((response) => response.json())
+// .then((data) => console.log(data));
+
+
+// const fetch=()=>{
+  // fetch('http://example.com/movies.json')
+  // .then((response) => response.json())
+  // .then((data) => console.log(data))
+  // .catch((error) => {
+    // console.error('Error:', error);
+    // });
+    // }
+
+
+
+
+
 
 
 
