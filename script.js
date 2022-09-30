@@ -510,15 +510,65 @@
 
 
 
+    // function resolveAfter2Seconds(x) {
+    //   return new Promise((resolve) => {                       // creating new promise and passing in resolve
+    //     setTimeout(() => {                                     //setting timout for 2 seconds 
+    //       resolve(x);
+    //     }, 2000);
+    //   });
+    // }
+    
+    // async function f1() {                                            //qcalling promise inside async function
+    //   const x = await resolveAfter2Seconds(10);
+    //   console.log(x); // 10                                      //printing the output ,which gets delayed for 2 seconds
+    // }
+    
+    // f1();
+
+
+    // async function foo(name) {                                           //here i'm checking how the code works inside async
+    //   console.log(name, "start");
+    //   await console.log(name, "middle");
+    //   console.log(name, "end");
+    // }
+    
+    // foo("First");
+    // foo("Second");
+
+
+//output:First start
+// First middle
+// Second start
+// Second middle
+// First end
+// Second end
 
 
 
 
+// // console.log('First!');
+
+// setTimeout(function second(){
+//     console.log('Timed Out!')
+// }, 0000)
+
+// console.log('Final!');
+
+//output ::first,final! and Timed out!
 
 
+// async function example() {
 
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => resolve("done!"), 2000)
+//   });
 
+//   let result = await promise; // wait until the promise resolves (*)
 
+//   console.log(result); // "done!"
+// }
+
+// example();
 
 
 
